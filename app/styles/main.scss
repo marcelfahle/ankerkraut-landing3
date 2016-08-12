@@ -1,14 +1,46 @@
 // bower:scss
+@import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "fonts.scss";
 // endbower
 
 
 
 
 $mob1: 360px;
+$mob2: 480px;
+$mob3: 550px;
+
 
 $tabl1: 640px;
+$tabl2: 760px;
+$tabl3: 840px;
 
 $desk1: 960px;
+$desk2: 1060px;
+$desk3: 1240px;
+
+
+p {
+  color: #1d1d1b;
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  strong {
+    font-weight: 800;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:link, a:visited {
+    color: #1d1d1b;
+  }
+  a:hover, a:active {
+    color: #fa5239;
+  }
+}
+
+
 
 
 .site-logo {
@@ -21,9 +53,15 @@ $desk1: 960px;
   img {
     width: 100%;
   }
-  @include breakpoint($tabl1) {
+  @include breakpoint($mob3) {
     width: 167px;
     height: 100px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  @include breakpoint($tabl2) {
+    width: 200px;
+    height: 120px;
   }
   @include breakpoint($desk1) {
     width: 240px;
@@ -40,12 +78,17 @@ $desk1: 960px;
   background: #fff url('/images/anne-und-stefan-mobile.jpg') top center no-repeat;
   background-size: cover;
 
+  margin-bottom: 62px;
 
-  @include breakpoint($tabl1) {
-    height: 300px;
+  @include breakpoint($mob3) {
+    background: #fff url('/images/anne-und-stefan-05x.jpg') top center no-repeat;
+    background-size: cover;
+    height: 47.7vw;
+    max-height: 609px;
+    margin-bottom: 72px;
   }
   @include breakpoint($desk1) {
-    height: 609px;
+    //height: 609px;
   }
     
 }
@@ -63,18 +106,365 @@ $desk1: 960px;
 
   letter-spacing: 4.5px;
 
+  @include breakpoint($tabl1) {
+    font-size: 20px;
+    line-height: 30px;
+    bottom: 19px;
+    letter-spacing: 5.2px;
+  }
+  @include breakpoint($tabl2) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @include breakpoint($tabl3) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @include breakpoint($tabl3) {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  @include breakpoint($desk1) {
+    font-size: 33px;
+    line-height: 46px;
+  }
+  @include breakpoint($desk2) {
+    font-size: 36px;
+    line-height: 51px;
+    letter-spacing: 7.2px;
+    bottom: 25px;
+  }
+  @include breakpoint($desk3) {
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 12.2px;
+    bottom: 43px;
+
+    max-width: 1200px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }
 .site-header__subhead {
-  display: block;
+  display: inline-block;
+  position: relative;
   font-family: 'campton-extralight', sans-serif;
   font-size: 8px;
   line-height: 32px;
 
   letter-spacing: 2.4px;
-  padding-left: 7px;
+  margin-left: 7px;
+
+  @include breakpoint($tabl2) {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+  @include breakpoint($desk1) {
+    font-size: 14px;
+    line-height: 60px;
+  }
+  @include breakpoint($desk3) {
+    font-size: 16px;
+    line-height: 84px;
+    margin-left: 17px;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    border-top: 1px solid white;
+    top: 16px;
+    width: 8px;
+    @include breakpoint($tabl2) {
+      top: 15px;
+    }
+    @include breakpoint($desk1) {
+      top: 29px;
+    }
+    @include breakpoint($desk3) {
+      top: 41px;
+    }
+  }
+  &:before {
+    right: 100%;
+    margin-right: 3px;
+  }
+  &:after {
+    left: 100%;
+    margin-left: 3px;
+  }
 }
+
+.hero__badge {
+  color: #fff;
+  background: #000;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  text-align: center;
+
+  position: absolute;
+  bottom: -58px;
+  right: 4px;
+
+  text-align: center;
+  img {
+    margin-top: 25px;
+    width: 79px;
+  }
+
+  @include breakpoint($mob1) {
+    right: 14px;
+  }
+  @include breakpoint($mob2) {
+    width: 114px;
+    height: 114px;
+    img {
+      width: 86px;
+    }
+  }   
+  @include breakpoint($tabl1) {
+    bottom: auto;
+    top: -58px;
+  }
+  @include breakpoint($tabl2) {
+    width: 144px;
+    height: 144px;
+    top: -68px;
+    img {
+      margin-top: 35px;
+      width: 102px;
+    }
+  }
+  @include breakpoint($desk1) {
+    width: 174px;
+    height: 174px;
+    top: -85px;
+    img {
+      margin-top: 42px;
+      width: 122px;
+    }
+  }
+  @include breakpoint($desk2) {
+    width: 194px;
+    height: 194px;
+    top: -95px;
+    img {
+      margin-top: 42px;
+      width: 152px;
+    }
+  }
+  @include breakpoint($desk3) {
+    width: 233px;
+    height: 233px;
+    top: -110px;
+    right: auto;
+    left: 50%;
+    transform: translateX(373px);
+    img {
+      margin-top: 55px;
+      width: 173px;
+    }
+  }
+}
+
 
 
 .wrapper {
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+
+
+
+.setlist-wrapper {
+  padding-bottom: 8px;
+}
+.setlist-wrapper__header {
+  position: relative;
+  font-family: 'campton-extralight';
+  font-size: 14px;
+  line-height: 36px;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 4px;
+  span {
+    display: inline-block;
+    position: relative;  
+  }
+  span:before,
+  span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 2px solid #000;
+    width: 500px;
+    top: 11px;
+  }
+  span:before {
+    right: 100%;
+    margin-right: 15px;
+  }
+  span:after {
+    left: 100%;
+    margin-left: 15px;
+  }
+}
+
+
+.setlist__item {
+  margin-bottom: 20px;
+}
+
+.setlist__item-bratduo, .setlist__item-kuechenduo {
+  img { width: 212px; }
+}
+.setlist__item-topmix {
+  img { width: 289px; }
+}
+.setlist__item-bbq {
+  img { width: 229px; }
+}
+.setlist__item-basics {
+  img { width: 290px; }
+}
+.setlist__item-bestof {
+  img { width: 297px; }
+}
+.setlist__item-executive {
+  img { width: 304px; margin-left: -12px; }
+}
+
+
+.setlist__item-header {
+  font-family: 'sohopro-regular';
+  font-size: 18px;
+  line-height: 43px;
+  text-transform: uppercase;
+  margin-top: -18px;
+  margin-bottom: 13px;
+  letter-spacing: 4px;
+}
+.setlist__item-description {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.setlist__item-price {
+  font-family: 'sohopro-regular';
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 11px;
+}
+.setlist__item-order-button {
+  display: inline-block;
+  font-family: 'campton-extralight';
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  background: #fa5239;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+.setlist-wrapper--last {
+  margin-bottom: 18px;
+}
+
+.section__shipping {
+  margin-bottom: 50px;
+}
+.shipping__headline {
+  margin-bottom: 10px;
+  img {
+    width: 123px;
+  }
+  span:before,
+  span:after {
+    top: 56px;
+  }
+}
+
+
+
+.section__newsletter {
+  margin-bottom: 50px;
+}
+.newsletter__headline {
+  margin-bottom: 20px;
+}
+
+.input__newsletter {
+  border: 1px solid #ebebeb;
+  width: 260px;
+  height: 30px;
+  color: #959595;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+.setlist__item-order-button--black {
+  background: #000;
+  border: none;
+  cursor: pointer;
+  &:hover, &:active {
+    background: #fa5239;
+  }
+}
+
+.section__ad {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 44px;
+  img {
+    width: 100%;
+  }
+}
+
+
+
+footer 
+{
+  min-height: 250px;
+  .contact {
+    color: #000;
+    text-align: left;
+    font-family: 'campton-extralight';
+    font-size: 9px;
+    line-height: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    float: left;
+    .fb {
+      display: inline-block;
+      margin-top: 14px;
+      width: 22px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .reddot {
+    float: right;
+    display: inline-block;
+    width: 107px;
+    img {
+      width: 100%;
+    }
+  }
 }
