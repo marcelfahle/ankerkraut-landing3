@@ -16,10 +16,23 @@ $tabl2: 760px;
 $tabl3: 840px;
 
 $desk1: 960px;
-$desk2: 1060px;
+$desk2b: 1060px;
+$desk2: 1240px;
 $desk3: 1240px;
 
+h3, p {
 
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:link, a:visited {
+    color: #1d1d1b;
+  }
+  a:hover, a:active {
+    color: #fa5239;
+  }
+}
 p {
   color: #1d1d1b;
   font-family: Arial;
@@ -29,14 +42,18 @@ p {
   strong {
     font-weight: 800;
   }
-  a {
-    text-decoration: none;
+  @include breakpoint($mob1) {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  a:link, a:visited {
-    color: #1d1d1b;
+  @include breakpoint($tabl3) {
+    font-size: 15px;
+    line-height: 19px;
   }
-  a:hover, a:active {
-    color: #fa5239;
+  @include breakpoint($desk2) {
+    line-height: 21px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -87,8 +104,9 @@ p {
     max-height: 609px;
     margin-bottom: 72px;
   }
-  @include breakpoint($desk1) {
+  @include breakpoint($desk2) {
     //height: 609px;
+    margin-bottom: 98px;
   }
     
 }
@@ -278,6 +296,9 @@ p {
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  max-width: 1180px;
 }
 
 
@@ -296,6 +317,7 @@ p {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: 4px;
+  margin-bottom: 10px;
   span {
     display: inline-block;
     position: relative;  
@@ -317,46 +339,218 @@ p {
     left: 100%;
     margin-left: 15px;
   }
+  @include breakpoint($tabl2) {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  @include breakpoint($desk2) {
+    font-size: 22px;
+    margin-bottom: 75px;
+    letter-spacing: 7px;
+  }
+}
+.setlist-wrapper__header--bestof {
+  @include breakpoint($desk2) {
+    margin-bottom: 45px;
+  }
 }
 
 
 .setlist__item {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  .img-wrap {
+    display: inline-block;
+    position: relative;
+    margin-bottom: -8px;
+  }
+}
+
+
+.setlist--2 .setlist__item {
+  @include breakpoint($tabl1) {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+  @include breakpoint($desk2) {
+    width: 34%;
+  }
+}
+.setlist--2.setlist-bestof .setlist__item {
+  @include breakpoint($desk2) {
+    width: 45%;
+  }
+  
+}
+.setlist--3 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.setlist--3 .setlist__item {
+  @include breakpoint($tabl1) {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  @include breakpoint($desk2) {
+    width: 30%;
+  }
+}
+.setlist--3 .img-wrap {
+  @include breakpoint($tabl1) {
+    height: 220px;
+    position: relative;
+    display: block;
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+  }
+  @include breakpoint($tabl2) {
+    height: 280px;
+  }
+  @include breakpoint($tabl3) {
+    height: 340px;
+  }
+  @include breakpoint($desk2) {
+    height: 400px;
+  }
 }
 
 .setlist__item-bratduo, .setlist__item-kuechenduo {
   img { width: 212px; }
+  @include breakpoint($tabl2) {
+    img { width: 262px; }
+  }
+  @include breakpoint($desk2) {
+    img { width: 327px; }
+  }
 }
-.setlist__item-topmix {
-  img { width: 289px; }
+.setlist__item-topmix, .setlist__item-basics {
+  img { width: 290px; }
+  @include breakpoint($tabl1) {
+    img { width: 210px; }
+  }
+  @include breakpoint($tabl2) {
+    img { width: 240px; }
+  }
+  @include breakpoint($tabl3) {
+    img { width: 290px; }
+  }
+  @include breakpoint($desk2) {
+    img { width: 425px; }
+  }
 }
 .setlist__item-bbq {
   img { width: 229px; }
-}
-.setlist__item-basics {
-  img { width: 290px; }
+  @include breakpoint($tabl1) {
+    img { width: 147px; }
+  }
+  @include breakpoint($tabl2) {
+    img { width: 187px; }
+  }
+  @include breakpoint($tabl3) {
+    img { width: 229px; }
+  }
+  @include breakpoint($desk2) {
+    img { width: 298px; }
+  }
 }
 .setlist__item-bestof {
   img { width: 297px; }
+  @include breakpoint($tabl1) {
+    img { width: 254px; }
+  }
+  @include breakpoint($tabl2) {
+    img { width: 297px; }
+  }
+  @include breakpoint($tabl3) {
+    img { width: 297px; }
+  }
+  @include breakpoint($desk2) {
+    img { width: 515px; }
+  }
 }
 .setlist__item-executive {
   img { width: 304px; margin-left: -12px; }
+  @include breakpoint($tabl1) {
+    img { width: 260px; }
+  }
+  @include breakpoint($tabl2) {
+    img { width: 304px; }
+  }
+  @include breakpoint($tabl3) {
+    img { width: 304px; }
+  }
+  @include breakpoint($desk2) {
+    img { width: 515px; }
+  }
 }
 
 
 .setlist__item-header {
+  position: relative;
   font-family: 'sohopro-regular';
   font-size: 18px;
-  line-height: 43px;
+  line-height: 36px;
   text-transform: uppercase;
-  margin-top: -18px;
-  margin-bottom: 13px;
+  margin-bottom: 16px;
   letter-spacing: 4px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 49px;
+    height: 2px;
+    background: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint($desk2) {
+      width: 68px;  
+    }
+  } 
+  @include breakpoint($tabl1) {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 3px;
+  }
+  @include breakpoint($tabl2) {
+    font-size: 18px;
+    line-height: 43px;
+    margin-bottom: 13px;
+    letter-spacing: 4px;
+  }
+  @include breakpoint($desk2) {
+    font-size: 26px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+  }
 }
 .setlist__item-description {
   font-family: Arial, sans-serif;
   font-size: 12px;
-  margin-bottom: 10px;
+  //max-width: 360px;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4px;
+  @include breakpoint($tabl3) {
+    max-width: none;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  @include breakpoint($desk2) {
+    max-width: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+    max-width: 80%;
+  }
 }
 .setlist__item-price {
   font-family: 'sohopro-regular';
@@ -364,6 +558,11 @@ p {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 11px;
+  @include breakpoint($desk2) {
+    font-size: 20px;
+    letter-spacing: 6px;
+    margin-bottom: 21px;
+  }
 }
 .setlist__item-order-button {
   display: inline-block;
@@ -378,13 +577,180 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3px;
+  @include breakpoint($desk2) {
+    font-size: 14px;
+    line-height: 35px;
+    padding-left: 12px;
+    padding-right: 12px;
+    letter-spacing: 4px;
+  }
 }
+.setlist__badge {
+  position: absolute;
+  width: 59px;
+  height: 41px; // adds padding
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  z-index: 100;
+
+  text-transform: uppercase;
+  font-family: 'campton-extralight', sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+
+  text-align: center;
+  line-height: 13px;
+  padding-top: 18px;
+
+  @include breakpoint($tabl1) {
+    width: 44px;
+    height: 31px;
+    padding-top: 13px;
+    font-size: 9px;
+    line-height: 10px;
+  }
+  @include breakpoint($tabl2) {
+    width: 59px;
+    height: 41px;
+    padding-top: 18px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  @include breakpoint($desk2) {
+    width: 86px;
+    height: 62px;
+    padding-top: 24px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 3px;
+  }
+
+}
+.setlist__item-bratduo .setlist__badge, 
+.setlist__item-kuechenduo .setlist__badge {
+  right: -20px;
+  @include breakpoint($tabl1) {
+    right: -5px;
+    top: -5px;
+  }
+  @include breakpoint($desk2) {
+    right: -25px;
+    top: -25px;
+  }
+}
+.setlist__item-topmix .setlist__badge {
+  right: 10px; top: 45px;
+  @include breakpoint($tabl1) {
+    right: 0px; top: 100px;
+  }
+  @include breakpoint($tabl2) {
+    top: 135px;
+  }
+  @include breakpoint($tabl3) {
+    top: 175px;
+  }
+  @include breakpoint($desk1) {
+    right: 10px;
+  }
+  @include breakpoint($desk1) {
+    top: 145px; right: 0px;
+  }
+}
+.setlist__item-bbq .setlist__badge {
+  right: -25px; top: 150px;
+  @include breakpoint($tabl1) {
+    right: 10px; top: 90px;
+  }
+  @include breakpoint($tabl2) {
+    top: 110px;
+  }
+  @include breakpoint($tabl3) {
+    top: 140px;
+  }
+  @include breakpoint($desk1) {
+    right: 20px;
+  }
+}
+.setlist__item-basics .setlist__badge {
+  right: 10px; top: 45px;
+  @include breakpoint($tabl1) {
+    top: 105px;
+  }
+  @include breakpoint($tabl2) {
+    top: 135px;
+  }
+  @include breakpoint($tabl3) {
+    top: 175px;
+  }
+  @include breakpoint($desk1) {
+    top: 185px; right: 20px;
+  }
+  @include breakpoint($desk1) {
+    top: 145px; right: 0px;
+  }
+}
+.setlist__item-bestof .setlist__badge {
+  right: 10px; top: 35px;
+  @include breakpoint($desk2) {
+    right: 10px; top: 90px;
+  }
+}
+.setlist__item-executive .setlist__badge {
+  right: 5px; top: 10px;
+  @include breakpoint($desk2) {
+    right: -5px; top: 30px;
+  }
+}
+
+
+
+.setlist__shipping-badge {
+  width: 177px;
+  height: 22px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN8AAAAcCAYAAADhhWo2AAAC3UlEQVR4Xu2cx6oVQRCGvyMGrmnhSn0AwxUughgW4kLRJzCgGEDBsDM8h2FnAAUDiuEJFF2ICwOCCMYHUNdGDKjUpWeYM2dmutpzVvZ/djNdXUN/p3+qq3p6esA84CUwl4TflB5jv/8kdJCpCPy/BL4lDu0LMNELnTYCtxMdyFwERODfCGwFbhbiMxengYNeX9ZRgc9LS3YiUBI4BRyxq6r4ZgAPgeUeUBKfh5JsRKCPwANgA/CjLj67Xgw8AebEoEl8MUJqF4E+Ah+AFcC74m418hX3tgNXY+AkvhghtYtASeBXiHj3q0yaxGftZ4H9XfAkPk0tEXATOAacqFu3iW8s5H8Tbe4lPjd4GeZN4BZg1c2B+mSb+AzXkpD/zW5iJ/HlPaM0eheB18Aq4FObhrq87AQuS3wu0DISgSqBz8Dq8AJLI5muyFd0OA/sbVqvap9Ps00EWglsA27E6iYxfjOBx8CyeqVG4ouhU3umBMqN9GHFZ/2XhvxvVuFMOV+m00rDjhGwjfT1wM+YoWfZWfjYDVyU+GJI1Z4xAcvzFgHvPQxSxLcAeAtMVj8V+Tx4ZZMhgT3AJc+4veKbBtwD1iryebDKJmMCdlxoJfAqxsArvpPAYRVcYjjVLgKTBF6E/b2vwxZcbHf+et2Jlp2aZiLQSeACsG8Y8Y0Dj4o8T5FP000EkgjsAq609ehadtqxItvfs9fMBn6KfEl/gozzJGDVT8v/7DWzRg213bfd+c1dqtUme54zSqNOIvAcWAMMfOelLfIdBY7H1qsSX9KfION8CZwDDjTVTer31gF3gakSX76zRSMfOYEdwLV63aR6vRB4CsyPPVo5X4yQ2kWgj4AdK7L8701xt7rsnB4iXrmRrsin6SMCIyXwLOR/381rVXwDG+kS30jBy5kIGIEzwKGq+LbEzh6JmwiIwMgIbALuWOSzF6atHFoeF/I8Qp+L91CSTSYEUj8X/xEY/wsBL2RI7cbyFQAAAABJRU5ErkJggg==) top left no-repeat;
+  background-size: cover;
+
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+
+  color: #fff;
+  font-family: 'campton-ultralight', sans-serif;
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+
+  @include breakpoint($desk2) {
+    width: 223px;
+    height: 28px;
+    line-height: 29px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
+
+
+
 .setlist-wrapper--last {
-  margin-bottom: 18px;
+  //margin-bottom: 18px;
 }
 
 .section__shipping {
   margin-bottom: 50px;
+  @include breakpoint($desk2) {
+    margin-bottom: 100px;
+  }
 }
 .shipping__headline {
   margin-bottom: 10px;
@@ -395,28 +761,56 @@ p {
   span:after {
     top: 56px;
   }
+  @include breakpoint($tabl3) {
+    margin-bottom: 20px;
+    img { width: 153px; }
+    span:before,
+    span:after {
+      top: 75px;
+    }
+
+  }
+  @include breakpoint($desk2) {
+    margin-bottom: 25px;
+    img { width: 233px; }
+    span:before, span:after {
+      top: 108px;
+    }
+  }
 }
 
 
 
 .section__newsletter {
   margin-bottom: 50px;
+  @include breakpoint($desk2) {
+    margin-bottom: 70px;
+  }
 }
 .newsletter__headline {
   margin-bottom: 20px;
+  @include breakpoint($desk2) {
+    margin-bottom: 33px;
+  }
 }
 
 .input__newsletter {
   border: 1px solid #ebebeb;
   width: 260px;
   height: 30px;
-  color: #959595;
+  color: #ccc;
   font-family: Arial;
   font-size: 12px;
   font-weight: 400;
   line-height: 23px;
   margin-top: 25px;
   margin-bottom: 16px;
+  @include breakpoint($desk2) {
+    width: 320px;
+    font-size: 15px;
+    height: 35px;
+    line-height: 28px;
+  }
 }
 .setlist__item-order-button--black {
   background: #000;
@@ -428,11 +822,21 @@ p {
 }
 
 .section__ad {
+  margin-bottom: 44px;
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: 44px;
   img {
     width: 100%;
+  }
+  @include breakpoint($mob2) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+
+    
+  }
+  @include breakpoint($desk2) {
+    margin-bottom: 80px;
   }
 }
 
@@ -440,7 +844,7 @@ p {
 
 footer 
 {
-  min-height: 250px;
+  padding-bottom: 30px;
   .contact {
     color: #000;
     text-align: left;
@@ -450,6 +854,7 @@ footer
     text-transform: uppercase;
     letter-spacing: 1px;
     float: left;
+    span { display: none; }
     .fb {
       display: inline-block;
       margin-top: 14px;
@@ -457,6 +862,31 @@ footer
       img {
         width: 100%;
       }
+      @include breakpoint($tabl1) {
+        margin-top: 0;
+        margin-left: 12px;
+        vertical-align: middle;
+      }
+      @include breakpoint($desk1) {
+        width: 37px;
+      }
+    }
+    @include breakpoint($tabl1) {
+       
+    }
+    @include breakpoint($tabl2) {
+      br { display: none; }
+      span { display: inline; }
+      padding-top: 50px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint($tabl1) {
+      font-size: 12px;
+    }
+    @include breakpoint($desk2) {
+      padding-top: 88px;
+      font-size: 16px;
+      letter-spacing: 4px;
     }
   }
   .reddot {
@@ -466,5 +896,16 @@ footer
     img {
       width: 100%;
     }
+    @include breakpoint($tabl2) {
+      width: 137px;
+    }
+    @include breakpoint($desk2) {
+      width: 187px;
+    }
   }
+}
+footer:after {
+  content: "";
+  position: absolute;
+  clear: both;
 }
