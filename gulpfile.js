@@ -4,6 +4,8 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
+//const cdn = require('gulp-cdn-replace');
+const cdnizer = require("gulp-cdnizer");
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -62,7 +64,18 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    //.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe(cdnizer({
+      defaultCDNBase: "https://d2hjocz4h0f77r.cloudfront.net/lp/",
+      allowRev: false,
+      allowMin: false,
+      files: [
+        'scripts/vendor/modernizr.js',
+        'styles/main.css',
+        'apple-touch-icon.png',
+        'scripts/main.js',
+        '**/*.{gif,png,jpg,jpeg}'
+      ]}))
     .pipe(gulp.dest('dist'));
 });
 
@@ -84,6 +97,14 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
+
+
+/*
+gulp.task('cdn', () => {
+  return gulp.src('app/index.html')
+    .pipe(gulp.dest('dist'));
+});
+*/
 
 gulp.task('extras', () => {
   return gulp.src([
