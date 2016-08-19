@@ -903,9 +903,21 @@ footer
       width: 187px;
     }
   }
-}
-footer:after {
-  content: "";
-  position: absolute;
-  clear: both;
+
+  .aklink {
+    clear: both;
+    text-align: center;
+    font-family: 'campton-extralight';
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include breakpoint($tabl1) {
+      font-size: 12px;
+    }
+    @include breakpoint($desk2) {
+      font-size: 16px;
+      letter-spacing: 4px;
+    }
+  }
 }
