@@ -42,5 +42,31 @@
         "single"
       ]
     }
-  }
+  },
+  "name": "ankerkraut-landing3",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gulp-cdnizer": "^1.1.7",
+    "gulp-cdn-replace": "^0.3.0"
+  },
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp",
+    "deploy": "gulp && now dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelfahle/ankerkraut-landingpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelfahle/ankerkraut-landingpage/issues"
+  },
+  "homepage": "https://github.com/marcelfahle/ankerkraut-landingpage#readme",
+  "description": ""
 }
