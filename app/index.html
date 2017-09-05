@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ankerkraut</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/flickity/css/flickity.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="bower_components/reset-css/reset.css">
+    <link rel="stylesheet" href="bower_components/flickity/dist/flickity.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
@@ -31,213 +38,397 @@
 
     <header class="page-head">
       <div class="site-logo">
-        <img src="images/logo-ankerkraut.png" alt="Ankerkraut Geschmacksmanufaktur">
+        <img src="/images/logo-ankerkraut.png" class="show-desktop" alt="Ankerkraut Geschmacksmanufaktur">
+        <img src="/images/logo-ankerkraut-horizontal.png" class="show-mobile" alt="Ankerkraut Geschmacksmanufaktur">
+      </div>
+
+      <div class="social-links__wrapper social-links__wrapper--head">
+        <ul class="social-links">
+          <li class="li-ig">
+            <a href="https://www.instagram.com/ankerkrautspice/" target="_blank">
+              <img 
+                src="/images/icon-instagram.png" 
+                alt="#ankerkraut auf Instagram"
+                />
+            </a>
+          </li>
+          <li class="li-fb">
+            <a href="https://www.facebook.com/ankerkraut" target="_blank">
+              <img 
+                src="/images/icon-facebook.png" 
+                alt="Ankerkraut auf Facebook" 
+                />
+            </a>
+          </li>
+          <li class="li-mail">
+            <a href="mailto:info@ankerkraut.de" target="_blank">
+              <img 
+                src="/images/icon-email.png" 
+                alt="Ankerkraut E-Mail Kontakt"
+                width="28" height="28"
+                />
+            </a>
+          </li>
+          <li class="li-tw">
+            <a href="https://twitter.com/ankerkraut" target="_blank">
+              <img 
+                src="/images/icon-twitter.png" 
+                alt="Ankerkraut auf Twitter"
+                width="28" height="28"
+                >
+            </a>
+          </li>
+        </ul>
       </div>
    
       <div class="hero">
-        <h1 class="site-header">
-          <span class="site-header__subhead">Anne & Stefan Lemcke</span>
-          <br/>Gewürzmischungen<br/>
-          ohne zusatzstoffe<br/>
-          für Küche & bbq
-        </h1>
-        <div class="hero__badge">
-          <img src="/images/stoerer-bekanntaus.png" alt="Bekannt aus Die Höhle der Löwen">
-        </div>
+        <h2>Gew&uuml;rzmischungen zum</h2>
+        <ul class="site-header">
+
+          <li>
+            <img src="/images/icon-grillen.png" alt="Grillen" />
+          </li>
+          <li>
+            <img src="/images/icon-kochen.png" alt="Kochen" />
+          </li>
+          <li>
+            <img src="/images/icon-backen.png" alt="Backen" />
+          </li>
+          <li>
+            <img src="/images/icon-trinken.png" alt="Trinken" />
+          </li>
+
+        </ul>
       </div>
     </header>
 
     <div class="wrapper">
       <section class="setlist-wrapper">
-        <h2 class="setlist-wrapper__header"><span>2er Sets</span></h2>
+        <h2 class="setlist-wrapper__header setlist-wrapper__header--6er"><span>6er Sets</span></h2>
         <ul class="setlist setlist--2">
-          <li class="setlist__item setlist__item-bratduo">
+
+          <li class="setlist__item setlist__item-kennenlern-kochen">
             <div class="img-wrap">
-              <span class="setlist__badge">2er<br/>Set</span>
-              <a href="/brat-duo">
-                <img src="/images/prod-bratduo.jpg" alt="Brat duo" title="Brat Duo">
+              <span class="setlist__badge">6er<br/>Set</span>
+              <a href="/kennenlernset-kochen">
+                <img src="/images/prod-kennenlern-kochen.png" alt="Kennenlernset Kochen" title="Kennenlernset Kochen">
               </a>
             </div>
             <h3 class="setlist__item-header">
-              <a href="/brat-duo">
-                Brat Duo
+              <a href="/kennenlernset-kochen">
+                Kennenlernset<br/>
+                kochen
               </a>
             </h3>
             <p class="setlist__item-description">
-              Bratkartoffeln & Brathähnchen
+              Sour-Creme & Onion, Pizza Gewürz, Bolognese, Rührei, Italienische Kräuter, Tomatensalz
             </p>
-            <p class="setlist__item-price">8,90 &euro;</p>
-            <a class="setlist__item-order-button" href="/brat-duo">
-              Jetzt Bestellen
+            <p class="setlist__item-price">27,90 &euro;</p>
+            <a class="setlist__item-order-button" href="/kennenlernset-kochen">
+              Jetzt Bestellen &gt;
             </a>
           </li>
 
-          <li class="setlist__item setlist__item-kuechenduo">
+          <li class="setlist__item setlist__item-kennenlern-grillen">
             <div class="img-wrap">
-              <span class="setlist__badge">2er<br/>Set</span>
-              <a href="/kuechen-duo">
-                <img src="/images/prod-kuechenduo.jpg" alt="Küchen Duo" title="Küchen Duo">
+              <span class="setlist__badge">6er<br/>Set</span>
+              <a href="/kennenlernset-grillen">
+                <img src="/images/prod-kennenlern-grillen.png" alt="Kennenlernset Grillen" title="Kennenlernset Grillen">
               </a>
+              <span class="setlist__shipping-badge">- Versandkostenfrei -</span>
             </div>
             <h3 class="setlist__item-header">
-              <a href="/kuechen-duo">
-                Küchen Duo
+              <a href="/kennenlernset-grillen">
+                Kennenlernset<br/>
+                Grillen
               </a>
             </h3>
             <p class="setlist__item-description">
-              Pfeffer Symphonie, Gew&uuml;rzsalz
+            Magic Dust, Cherry Chipotle, Pull that Piggy, Steak & BBW Salzflocken, Bang Boom Bang, Sweet Apple Ribs
             </p>
-            <p class="setlist__item-price">8,90 &euro;</p>
-            <a class="setlist__item-order-button" href="/kuechen-duo">
-              Jetzt Bestellen
+            <p class="setlist__item-price">35,90 &euro;</p>
+            <a class="setlist__item-order-button" href="/kennenlernset-grillen">
+              Jetzt Bestellen &gt;
             </a>
           </li>
         </ul>
       </section>
     
 
-      <section class="setlist-wrapper">
-        <h2 class="setlist-wrapper__header"><span>6er Sets</span></h2>
-        <ul class="setlist setlist--3">
-          <li class="setlist__item setlist__item-topmix">
+      <section class="setlist-wrapper setlist-slider__wrapper">
+        <h2 class="setlist-wrapper__header"><span>Bestseller</span></h2>
+        <ul class="setlist setlist-slider">
+
+          <!-- 1 //-->
+          <li class="setlist__item setlist-slider__item">
             <div class="img-wrap">
-              <span class="setlist__badge">6er<br/>Set</span>
-              <a href="/top-mischungen">
-                <img src="/images/prod-topmix.jpg" alt="Top Mischungen" title="Top Mischungen">
+              <a href="/magic-dust-streuer">
+                <img src="/images/top10-magicdust.png" alt="Magic Dust" title="Magic Dust">
               </a>
             </div>
-            <span class="setlist__shipping-badge">- Versandkostenfrei -</span>
             <h3 class="setlist__item-header">
-              <a href="/top-mischungen">
-                Top Mischungen
+              <a href="/magic-dust-streuer">
+                Magic Dust
               </a>
             </h3>
             <p class="setlist__item-description">
-              Pilz Gewürz, Bratkartoffel, Rührei Mix, Wok Gewürz, Aglio e Olio, Kräutersalz 
-              <br/><strong>+ Rucksack</strong>
+            Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 3,69 € / 100 Gr
             </p>
-            <p class="setlist__item-price">31,50 &euro;</p>
-            <a class="setlist__item-order-button" href="/top-mischungen">
-              Jetzt Bestellen
+            <p class="setlist__item-price">8,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/magic-dust-streuer">
+              Jetzt Bestellen &gt;
             </a>
           </li>
 
-          <li class="setlist__item setlist__item-bbq">
+
+
+          <!-- 2 //-->
+          <li class="setlist__item setlist-slider__item">
             <div class="img-wrap">
-              <span class="setlist__badge">6er<br/>Set</span>
-              <a href="/bbq-set-435">
-                <img src="/images/prod-bbq.jpg" alt="BBQ Set" title="BBQ Set">
+              <a href="/einhorn">
+                <img src="/images/top10-einhorn.png" alt="Einhorn" title="Einhorn">
               </a>
             </div>
-            <span class="setlist__shipping-badge">- Versandkostenfrei -</span>
             <h3 class="setlist__item-header">
-              <a href="/bbq-set-435">
-                BBQ Set
+              <a href="/einhorn">
+                Einhorn
               </a>
             </h3>
             <p class="setlist__item-description">
-              Pommes Salz, Magic Dust, Buletten, Steakpfeffer Hamburg, Ankerkraut BBQ, Texas Chicken
-              <br/><strong>+ Schürze</strong>
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 4,99 € / 100 Gr
             </p>
-            <p class="setlist__item-price">38,90 &euro;</p>
-            <a class="setlist__item-order-button" href="/bbq-set-435">
-              Jetzt Bestellen
+            <p class="setlist__item-price">5,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/einhorn">
+              Jetzt Bestellen &gt;
             </a>
           </li>
 
           
-          <li class="setlist__item setlist__item-basics">
+          <!-- 3 //-->
+          <li class="setlist__item setlist-slider__item">
             <div class="img-wrap">
-              <span class="setlist__badge">6er<br/>Set</span>
-              <a href="/basics">
-                <img src="/images/prod-basics.jpg" alt="Basics" title="Basics">
+              <a href="/kraeuterbutter-gewuerz">
+                <img src="/images/top10-kraeuterbutter.png" alt="Kräuterbutter" title="Kräuterbutter">
               </a>
             </div>
-            <span class="setlist__shipping-badge">- Versandkostenfrei -</span>
             <h3 class="setlist__item-header">
-              <a href="/basics">
-                Basics
+              <a href="/kraeuterbutter-gewuerz">
+                Kräuterbutter
               </a>
             </h3>
             <p class="setlist__item-description">
-              Italienische Kräuter, Paprika edelsüß, Hamburger Hafencurry, Gewürzsalz, Pfeffer Symphonie, Chili Flocken
-              <br/><strong>+ Rucksack</strong>
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 7,84 € / 100 Gr
             </p>
-            <p class="setlist__item-price">30,90 &euro;</p>
-            <a class="setlist__item-order-button" href="/basics">
-              Jetzt Bestellen
+            <p class="setlist__item-price">5,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/kraeuterbutter-gewuerz">
+              Jetzt Bestellen &gt;
             </a>
           </li>
+
+
+
+
+          <!-- 4 //-->
+          <li class="setlist__item setlist-slider__item">
+            <div class="img-wrap">
+              <a href="/pull-that-piggy-streuer">
+                <img src="/images/top10-pullthatpiggy.png" alt="Pull that Piggy" title="Pull that Piggy">
+              </a>
+            </div>
+            <h3 class="setlist__item-header">
+              <a href="/pull-that-piggy-streuer">
+                Pull that Piggy
+              </a>
+            </h3>
+            <p class="setlist__item-description">
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 3,86 € / 100 Gr
+            </p>
+            <p class="setlist__item-price">8,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/pull-that-piggy-streuer">
+              Jetzt Bestellen &gt;
+            </a>
+          </li>
+
+
+          <!-- 5 //-->
+          <li class="setlist__item setlist-slider__item">
+            <div class="img-wrap">
+              <a href="/bolognese">
+                <img src="/images/top10-bolognese.png" alt="Bolognese" title="Bolognese">
+              </a>
+            </div>
+            <h3 class="setlist__item-header">
+              <a href="/bolognese">
+                Bolognese
+              </a>
+            </h3>
+            <p class="setlist__item-description">
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 5,23 € / 100 Gr
+            </p>
+            <p class="setlist__item-price">5,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/bolognese">
+              Jetzt Bestellen &gt;
+            </a>
+          </li>
+
+
+
+          <!-- 6 //-->
+          <li class="setlist__item setlist-slider__item">
+            <div class="img-wrap">
+              <a href="/ruehrei-mix">
+                <img src="/images/top10-ruehrei.png" alt="Rührei Gewürz" title="Rührei Gewürz">
+              </a>
+            </div>
+            <h3 class="setlist__item-header">
+              <a href="/ruehrei-mix">
+                Rührei Gewürz
+              </a>
+            </h3>
+            <p class="setlist__item-description">
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 6,86 € / 100 Gr
+            </p>
+            <p class="setlist__item-price">5,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/ruehrei-mix">
+              Jetzt Bestellen &gt;
+            </a>
+          </li>
+
+          <!-- 7 //-->
+          <li class="setlist__item setlist-slider__item">
+            <div class="img-wrap">
+              <a href="/brathaehnchen-gewuerz">
+                <img src="/images/top10-brathaehnchen.png" alt="Brathähnchen" title="Brathähnchen">
+              </a>
+            </div>
+            <h3 class="setlist__item-header">
+              <a href="/brathaehnchen-gewuerz">
+                Brathähnchen
+              </a>
+            </h3>
+            <p class="setlist__item-description">
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 7,32 € / 100 Gr
+            </p>
+            <p class="setlist__item-price">5,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/brathaehnchen-gewuerz">
+              Jetzt Bestellen &gt;
+            </a>
+          </li>
+
+          <!-- 8 //-->
+          <li class="setlist__item setlist-slider__item">
+            <div class="img-wrap">
+              <a href="/pommes-frites-salz">
+                <img src="/images/top10-pommessalz.png" alt="Pommes Frites Salz" title="Pommes Frites Salz">
+              </a>
+            </div>
+            <h3 class="setlist__item-header">
+              <a href="/pommes-frites-salz">
+                Pommes Frites Salz
+              </a>
+            </h3>
+            <p class="setlist__item-description">
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 2,22 € / 100 Gr
+            </p>
+            <p class="setlist__item-price">5,99 &euro;</p>
+            <a class="setlist__item-order-button" href="/pommes-frites-salz">
+              Jetzt Bestellen &gt;
+            </a>
+          </li>
+
+          <!-- 9 //-->
+          <li class="setlist__item setlist-slider__item">
+            <div class="img-wrap">
+              <a href="/paprika-edelsuess">
+                <img src="/images/top10-paprikaedelsuess.png" alt="Paprika edelsüß" title="Paprika edelsüß">
+              </a>
+            </div>
+            <h3 class="setlist__item-header">
+              <a href="/paprika-edelsuess">
+                Paprika edelsüß
+              </a>
+            </h3>
+            <p class="setlist__item-description">
+              Inkl. 7% USt., zzgl. Versandkosten; Lieferzeit: 3-10 Werktage; entspricht 6,41 € / 100 Gr
+            </p>
+            <p class="setlist__item-price">4,49 &euro;</p>
+            <a class="setlist__item-order-button" href="/paprika-edelsuess">
+              Jetzt Bestellen &gt;
+            </a>
+          </li>
+
+
         </ul>
       </section>
 
 
 
-      <section class="setlist-wrapper setlist-wrapper--last">
-        <h2 class="setlist-wrapper__header setlist-wrapper__header--bestof"><span>Deluxe Sets</span></h2>
-        <ul class="setlist setlist--2 setlist-bestof">
-          <li class="setlist__item setlist__item-bestof">
-            <div class="img-wrap">
-              <span class="setlist__badge">12er<br/>Set</span>
-              <a href="/best-of">
-                <img src="/images/prod-bestof.jpg" alt="Best of" title="Best of">
-              </a>
-            </div>
-            <span class="setlist__shipping-badge">- Versandkostenfrei -</span>
-            <h3 class="setlist__item-header">
-              <a href="/best-of">
-                Best of
-              </a>
-            </h3>
-            <p class="setlist__item-description">
-              Curry englisch, Pfeffer Symphonie, Kräutersalz, Italienische Kräuter, Meersalz fein, Brathähnchen Gewürz, Aglio e Olio, Patatas Bravas, Paprika geräuchert, Bulettengewürz, Kräuterbutter Gewürz, Pommes Frites Salz
-              <br/><strong>+ Rucksack</strong>
-            </p>
-            <p class="setlist__item-price">48,90 &euro;</p>
-            <a class="setlist__item-order-button" href="/best-of">
-              Jetzt Bestellen
-            </a>
-          </li>
 
-          <li class="setlist__item setlist__item-executive">
-            <div class="img-wrap">
-              <span class="setlist__badge">24er<br/>Set</span>
-              <a href="/executive">
-                <img src="/images/prod-executive.jpg" alt="Executive" title="Executive">
-              </a>
-            </div>
-            <span class="setlist__shipping-badge">- Versandkostenfrei -</span>
-            <h3 class="setlist__item-header">
-              <a href="/executive">
-                Executive
-              </a>
-            </h3>
-            <p class="setlist__item-description">
-              Curry englisch, Pfeffer Symphonie, Kräutersalz, Italienische Kräuter, Meersalz fein, Brathähnchen Gewürz, Aglio e Olio, Patatas Bravas, Paprika geräuchert, Bulettengewürz, Kräuterbutter Gewürz, Pommes Frites Salz, Gewürzsalz, Hamburger Hafencurry, Chili con Carne mild, Steakpfeffer Hamburg, Bruschetta, Magic Dust, Quarkgewürz Gartenkräuter, Kräuter der Provence, Paprika edelsüß, bunter Pfeffer, Chili Salz, Salatgewürz, Gartenkräuter
-              <br/><strong>+ Rucksack</strong>
-            </p>
-            <p class="setlist__item-price">89,90 &euro;</p>
-            <a class="setlist__item-order-button" href="/executive">
-              Jetzt Bestellen
-            </a>
-          </li>
-        </ul>
+
+      <section class="section--fullwidth section__advent section--linked" data-href="/sets/gewuerz-adventskalender">
+
+        <div class="content">
+          
+          <h2>
+            <span class="">– ANKERKRAUT ADVENTSKALENDER -</span>
+            DER ADVENT <br/>
+            WIRD WÜRZIG
+          </h2>
+          <p>
+            Dieses Jahr findet ihr tolle Überraschungen im Adventskalender, inkusive unserer exklusiven und streng limitierten Weihnachs-Edition in edlen Korkengläsern. 
+          </p>
+          
+          <a class="setlist__item-order-button" href="/sets/gewuerz-adventskalender">
+            Jetzt Bestellen &gt;
+          </a>
+        </div>
+        
       </section>
 
 
-      <section class="section__more-products">
-        <h2 class="setlist-wrapper__header more-products__headline">
-          <span>Weitere Produkte</span>
-        </h2>
-
-        <img src="/images/more-products.png" width="50%" alt="Weitere Produkte" />
-
-        <a class="setlist__item-order-button" href="https://ankerkraut.de/">
-          Weitere Produkte Anzeigen
-        </a>
-
-
+      <section class="section__spacer">
+        <h2 class="setlist-wrapper__header setlist-wrapper__header--bestof"><span>unser sortiment</span></h2>
       </section>
+
+
+      <section class="section__fleurdesel section--fullwidth section--linked" data-href="/salz/fleur-de-sel-2">
+        <div class="content">
+          <h2>
+            Fleur de Sel
+          </h2>
+          <a class="setlist__item-order-button" href="/salz/fleur-de-sel-2">
+            Zu den Meersalzen &gt;
+          </a>
+          <img src="/images/prod-fleurdesel.png" alt="Fleur de Sel">
+        </div>
+      </section>
+
+      <section class="section__bbq section--fullwidth section--linked" data-href="/bbq/bbq-gewuerze-streuer">
+        <div class="content">
+          <h2>
+            BBQ &<br/>
+            GRILLEN
+          </h2>
+          <a class="setlist__item-order-button" href="/bbq/bbq-gewuerze-streuer">
+            Zu den BBQ-Gew&uuml;rzen &gt;
+          </a>
+          <img src="/images/prod-bbq.png" alt="BBQ & Grillen">
+        </div>
+      </section>
+
+      <section class="section__tee section--fullwidth section--linked" data-href="/tee">
+        <div class="content">
+          <h2>
+            TEE &<br/>
+            GETR&Auml;NKE
+          </h2>
+          <a class="setlist__item-order-button" href="/tee">
+            Zu den Tees &gt;
+          </a>
+          <img src="/images/prod-tee.png" alt="Tee & Advent">
+        </div>
+      </section>
+
 
 
       <section class="section__shipping">
@@ -248,7 +439,7 @@
         </h2>
 
         <p class="shipping__notice">
-          *Für Bestellungen innerhalb Deutschlands unter 30 Euro fallen 3,80 Euro für den Versand an. Für den Versand nach Österreich, Belgien, Frankreich, Italien, Luxemburg, Niederlande, Spanien, Großbritannien
+        *Für Bestellungen innerhalb Deutschlands unter 30 Euro fallen 2,80 Euro für den Versand an. Für den Versand nach Österreich, Belgien, Frankreich, Italien, Luxemburg, Niederlande, Spanien, Großbritannien
           <br/> 
           <a href="/lieferung" target="_blank"><strong>HIER KLICKEN</strong></a> 
         </p>
@@ -264,7 +455,7 @@
           Jetzt Newsletter abonnieren und immer als Erster von Rabatt-Aktionen und neuen Produkten erfahren!
         </p>
 
-        <form action="http://www.ankerkraut.de/newsletter/subscriber/new/" method="post">
+        <form action="//www.ankerkraut.de/newsletter/subscriber/new/" method="post">
           <input 
             type="text" 
             name="email"
@@ -283,30 +474,84 @@
       </section>
 
 
-      <section class="section__ad">
-        <a href="http://www.vox.de/cms/sendungen/die-hoehle-der-loewen.html" target="_blank">
-          <img src="/images/vox.jpg" alt="Die H&ouml;hle der L&ouml;wen. Dienstags | 20:15 Uhr">
-        </a>
+
+
+
+      <section class="section__social social-links__wrapper social-links__wrapper--footer">
+        <h2 class="setlist-wrapper__header social__headline">
+          <span>redet mit oder über uns</span>
+        </h2>
+
+        <ul class="social-links">
+          <li class="li-ig">
+            <a href="https://www.instagram.com/ankerkrautspice/" target="_blank">
+              <img 
+                src="/images/icon-instagram.png" 
+                alt="#ankerkraut auf Instagram"
+                />
+            </a>
+          </li>
+          <li class="li-fb">
+            <a href="https://www.facebook.com/ankerkraut" target="_blank">
+              <img 
+                src="/images/icon-facebook.png" 
+                alt="Ankerkraut auf Facebook" 
+                />
+            </a>
+          </li>
+          <li class="li-mail">
+            <a href="mailto:info@ankerkraut.de" target="_blank">
+              <img 
+                src="/images/icon-email.png" 
+                alt="Ankerkraut E-Mail Kontakt"
+                width="28" height="28"
+                />
+            </a>
+          </li>
+          <li class="li-tw">
+            <a href="https://twitter.com/ankerkraut" target="_blank">
+              <img 
+                src="/images/icon-twitter.png" 
+                alt="Ankerkraut auf Twitter"
+                width="28" height="28"
+                >
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          Ankerkraut GmbH | Telefon: 04181 / 9399870 
+          <br/>
+          <a href="mailto:info@ankerkraut.de">info@ankerkraut.de </a>  
+        </p>
+
+      
+      </section>
+
+
+      <section class="section__awards">
+        <h2 class="setlist-wrapper__header social__headline">
+          <span>Gewinner-Typen</span>
+        </h2>
+        <p>
+          Außen und innen „hui!“: Wir legen nicht nur Wert auf Qualität was unsere Gewürze angeht, sondern auch auf hochwertiges Design. Deswegen sind wir besonders stolz darauf, dass unsere Gewürzgläser sowie unsere Tee-Labels mit zwei red dots ausgezeichnet wurden.
+        </p>
+        <p class="awards">
+         <a href="http://red-dot-21.com/design/ankerkraut-gewurzmanufaktur/" target=="_blank">
+           <img src="/images/reddot2014.png" alt="reddot award 2014 winner">
+         </a>
+         <a href="http://red-dot-21.com/design/ankerkraut-tea-range/" target="_blank">
+           <img src="/images/reddot2016.png" alt="reddot award 2016 winner">
+         </a>
+        </p>
+      
       </section>
 
 
 
 
       <footer>
-        <p class="contact">
-        Ankerkraut GmbH <span>|</span> <br/>
-        Telefon: <span>|</span> <br/>
-        04181 / 9399870 <span>|</span><br/> 
-        <a href="mailto:info@ankerkraut.de">info@ankerkraut.de</a><br/>   
-        
-        <a href="https://www.facebook.com/ankerkraut" target="_blank" title="Like uns auf Facebook" class="fb">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAEEElEQVRYR+2YWWxUZRTH/99d2umspbbTFoqRB22CopZCihaXRMUXhFYepERBMESfXEgJiz6IppEYK1iFtqiJkbDzQEzT0BpACdW2EpcEbW2lUV6IQ2dals7t9G7mfHWmc2coHWZJTew3b3Pvne/3/c85/3PnsCefaVgy6pTrTbBSADqmb4kA+jRjbBOrXLO3G6awePpYYnZm5g+ssqbJDyDvPwMFBFhlTaMPYAWZgmJs/JdNM9EdzCuk1N8AvIk+kuh9jDFomg4lpEHXDViYTIBgHTlZkGURppXYlxEoAro+EgKDiTnFuSjxuuHIkSPnYQKDphrov+TH4FAQsiREnzX9UAQ0fE3B3GIPVi27D4sWlKCk0A17FJTAGEZDGt7Zexrt5/rhcdkyByUIDENXFZTOK8CWjY9i8YKSSaOtGwa21beh9dvfkevOyQwUKaQoKhz2LLxX+zQefvDOW6afElLx1q52tHX8gdxMKuUfDuKVmgq8+vxDIMhbrYxD0f7KqAaHXcbubctRNn92QkW6tf4kWs70ZiZ8pErgahAV989F3RvLUFzgioMie/ip5zIuXgrwa6qu4+TZPvQODCLHJqU/p0gpKu1nn7oX219+nOdV9AoqKt7//Cy+Ot3Dv6bAmgzIlkVIohBrrOmxhDDUCyvLsHnDI9wQo9eZrot4va4FDns2qEKnWOmFWltVhlqCkiagDMPEvsNd2HOoG7M82TCMqZiQPBR1BsoTah+k1JXACNavKsfWjY/FQX30ZQcaOZTNEipJEiAy8n3LSgXK5D0rXPqDQyNYV12OzS/FK/XJgU40H+nifkSHoUPQczy3+KnSAEUN1uXMxtqqhfA4qEWYvPHefVc+HigtsuSNCRO/9vvQM+CDTZbGlQVDMDSGE1//hr4/qfom+iKQZPhUVUeR14WDH6y2NNopsyXqhsBwEK/VteDn3svIdVvCmlz4VE2H9w4nmndUYbbXfTsskXu/+/EvvLm7HdduhGC3ydF5NX1Qx9ouYGfzN5BlAZJosZAkoVQdhflOfPpuNQrz4907Eel2fdGBz46f56GLca4koSh8eU407ViJOYUekBfRh1fUv1UVDRa5DsaLgFrS2x+fwqnOAeTF2ETSiU4VJAsCigpcXH5KiOHrClY8MR8vVpdb3iQJ6FDrLzjaegFuZxZXZUw14PPfgDKmQhQsb510luSUCqug6QYM7lXjvW99dTm2cPOc2IigGvZ/j8bDnZEqo6uiKPLnbrJSgwr/YBhqsjaz52An9h3pji39yVJvBmpGqUiiz+TUVA79f6m+1Kcu6VWKpi6rm/xgqc2n0gtF86k1jd0wWUqTvLRC0SSv4rmGJZKQ9SGAe5KdeU5ALUTthqVxfxwSbDN85glB3PQPu6RsrgOr0loAAAAASUVORK5CYII=" alt="Like uns auf Facebook!">
-        </a>
-
-        </p>
-        <a href="http://red-dot-21.com/design/ankerkraut-gewurzmanufaktur/" target="_blank" class="reddot">
-          <img src="/images/reddot.png" alt="reddot award 2014 winner">
-        </a>
+        <a class="bigboldlink" href="https://www.ankerkraut.de/impressum">IMPRESSUM</a>
 
       </footer>
 
@@ -326,8 +571,138 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
+    <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
+    <script src="/bower_components/fizzy-ui-utils/utils.js"></script>
+    <script src="/bower_components/get-size/get-size.js"></script>
+    <script src="/bower_components/unipointer/unipointer.js"></script>
+    <script src="/bower_components/tap-listener/tap-listener.js"></script>
+    <script src="/bower_components/unidragger/unidragger.js"></script>
+    <script src="/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <style>
+      .mfp-iframe-holder .mfp-content {
+        line-height: 0;
+        width: 100%;
+        max-width: 850px;
+        height: 100%;
+        max-height: 550px;
+      }
+    </style>
+    <script>
+      var t;
+      var shown = getCookie('signup');
+      if ( !shown ) {
+        window.onload = resetTimer;
+        document.onmousemove = resetTimer;
+        document.onkeypress = resetTimer;
+      }
+
+      function showSignup() {
+        console.log('showSignup');
+        
+        shown = true;
+        setCookie('signup', 'true', 7);
+        stopTimer();
+        $.magnificPopup.open({
+          type: 'iframe',
+          items: {
+            src: '/popup.html'
+          }
+
+        }, 0);
+      }
+      function resetTimer() {
+        console.log('resetTimer');
+        clearTimeout(t);
+        t = setTimeout(showSignup, 5000)
+      }
+
+      function stopTimer() {
+        console.log('stopTimer', t);
+        clearTimeout(t);
+        window.onload = null;
+        document.onmousemove = null;
+        document.onkeypress = null;
+      }
+
+
+      document.addEventListener('scroll', function (event) {
+        if (document.body.scrollHeight == 
+            document.body.scrollTop +        
+            window.innerHeight) {
+
+          if (!shown) showSignup();
+        }
+      });
+      function addEvent(obj, evt, fn) {
+        if (obj.addEventListener) {
+          obj.addEventListener(evt, fn, false);
+        }
+        else if (obj.attachEvent) {
+          obj.attachEvent("on" + evt, fn);
+        }
+      }
+
+      addEvent(window,"load",function(e) {
+        addEvent(document, "mouseout", function(e) {
+          e = e ? e : window.event;
+          var from = e.relatedTarget || e.toElement;
+          if (!from || from.nodeName == "HTML") {
+            console.log('left window');
+            if (!shown) showSignup();
+
+          }
+        });
+      });
+
+
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        console.log('cookie set');
+      }
+      function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0)==' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+          }
+        }
+        return "";
+      }
+
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elem = document.querySelector('.setlist-slider');
+        var flkty = new Flickity( elem, {
+          cellAlign: 'left',
+          groupCells: true,
+          accessibility: true,
+          adaptiveHeight: true,
+          pageDots: false,
+          arrowShape: {
+            x0: 10,
+            x1: 60, y1: 50,
+            x2: 60, y2: 45,
+            x3: 15
+          }
+        });
+        window.onload = function () { flkty.resize(); }
+      });
+
+
+
+    </script>
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

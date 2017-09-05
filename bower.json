@@ -2,7 +2,8 @@
   "name": "ankerkraut-landing",
   "private": true,
   "dependencies": {
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "flickity": "^2.0.9"
   },
   "devDependencies": {
     "chai": "^3.5.0",
